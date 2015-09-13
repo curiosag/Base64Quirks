@@ -12,7 +12,7 @@ public class AyudaSystems implements Codec {
 	}
 
 	private String normalize(String c) {
-		return c.replace("\r\n", "");
+		return c.replace("\n", "").replace("\r", "");
 	}
 
 	private void echo(String message) {
@@ -21,9 +21,9 @@ public class AyudaSystems implements Codec {
 	}
 
 	/**
-	 * This constructor covers any shifting manipulations of the source text if
-	 * shifting is done on a per-character-level. It is brute forcing the number
-	 * to shift for each position of the clear text
+	 * This constructor covers any shifting manipulations of the source text
+	 * as used at least until the last github push of this very file. 
+	 * It is brute forcing the number to shift for each position of the clear text
 	 * 
 	 * @param clear
 	 *            a sample of clear text (just anything, e.g. "???...", ), at
@@ -44,9 +44,8 @@ public class AyudaSystems implements Codec {
 	 * valid constructor as of 12-09-2015
 	 * 
 	 * @param shiftBy
-	 *            every character will be shifted to the right by a base number,
-	 *            The value of it as of 12-09-2015 is 78 and is inc-ed by 1 once
-	 *            a week by the ayudasystems guys shifting uses shiftBy, plus...
+	 *            every character will be shifted to the right by a base number plus...
+	 *            
 	 * @param indexMultiplier
 	 *            ...plus the index of each clear text character. The value of
 	 *            indexMultiplier as of 12-09-2015 is 1
