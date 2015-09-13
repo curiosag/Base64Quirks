@@ -113,14 +113,24 @@ public class AyudaSystems implements Codec {
 
 	public String shiftCharactersRight(String s) {
 		Check.isTrue(s != null);
-		return shiftCharacters(s, (a, b, c) -> Calc.shiftRight(a, b, c),
-				baseAlphabetSize);
+		return shiftCharacters(s, new ShiftOp() {
+
+			@Override
+			public int shift(int arrayLength, int index, int shiftBy) {
+				return Calc.shiftRight(arrayLength, index, shiftBy);
+			}
+		}, baseAlphabetSize);
 	}
 
 	public String shiftCharactersLeft(String s) {
 		Check.isTrue(s != null);
-		return shiftCharacters(s, (a, b, c) -> Calc.shiftLeft(a, b, c),
-				baseAlphabetSize);
+		return shiftCharacters(s, new ShiftOp() {
+
+			@Override
+			public int shift(int arrayLength, int index, int shiftBy) {
+				return Calc.shiftLeft(arrayLength, index, shiftBy);
+			}
+		}, baseAlphabetSize);
 	}
 
 	@Override
