@@ -113,7 +113,7 @@ public class AyudaSystems implements Codec {
 	public String shiftCharactersRight(String s) {
 		Check.isTrue(s != null);
 		return shiftCharacters(s, new ShiftOp() {
-
+			// made more sense with the lambdas of the java 8 implementation (won't run on google appengine)
 			@Override
 			public int shift(int arrayLength, int index, int shiftBy) {
 				return Calc.shiftRight(arrayLength, index, shiftBy);
@@ -124,7 +124,7 @@ public class AyudaSystems implements Codec {
 	public String shiftCharactersLeft(String s) {
 		Check.isTrue(s != null);
 		return shiftCharacters(s, new ShiftOp() {
-
+			
 			@Override
 			public int shift(int arrayLength, int index, int shiftBy) {
 				return Calc.shiftLeft(arrayLength, index, shiftBy);
