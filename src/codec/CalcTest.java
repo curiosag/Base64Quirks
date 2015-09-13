@@ -31,7 +31,8 @@ public class CalcTest {
 		assertEquals(3, Calc.shiftRight(4, 1, 2));
 		assertEquals(0, Calc.shiftRight(4, 3, 1));
 		assertEquals(1, Calc.shiftRight(4, 3, 2));
-		assertEquals(1, Calc.shiftRight(4, 2, 3));
+		assertEquals(1, Calc.shiftRight(4, 2, 3));	
+		assertEquals(2, Calc.shiftRight(10, 9, 13));
 
 	}
 }
