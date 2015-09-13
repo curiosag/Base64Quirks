@@ -5,7 +5,7 @@ public class Base64 implements Codec {
 	private final static String base64chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 
 	/**
-	 * See <a href=
+	 * Taken from <a href=
 	 * "https://en.wikibooks.org/wiki/Algorithm_Implementation/Miscellaneous/Base64#Java"
 	 * >wikibooks, Algorithm Implementation/Miscellaneous/Base64</a>
 	 */
@@ -50,7 +50,7 @@ public class Base64 implements Codec {
 	}
 
 	/**
-	 * See <a href=
+	 * Taken from <a href=
 	 * "https://en.wikibooks.org/wiki/Algorithm_Implementation/Miscellaneous/Base64#Java_2"
 	 * >wikibooks, Algorithm Implementation/Miscellaneous/Base64</a>
 	 */
