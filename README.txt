@@ -10,10 +10,10 @@ INPUT is "fake"
 OUTPUT is "idck" (used in the next step for base64 encoding)
 
 INPUT	ic	ia 	cs 	in 		new character 
-  f		0	5	2	7		i
-  a		1	0	2	3		d	
-  k		2	9	2	2		c		
-  e		3	4	2	9		k
+  f     0	5	2	7		i
+  a     1	0	2	3		d	
+  k     2	9	2	2		c		
+  e     3	4	2	9		k
  
 ia ... index of the character in the input alphabet
 ic ... index of the character in the input string
